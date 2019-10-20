@@ -1,3 +1,5 @@
+#%% PyTorch self-check script by github.com/jerryc05.
+
 __tab_w__ = 4
 
 
@@ -12,7 +14,7 @@ def __print_rjusted(s: str):
 print()
 __print_ljusted('PyTorch:')
 import torch
-__print_rjusted(f'v{torch.__version__} ✅')
+__print_rjusted(f'v{torch.version.__version__} ✅')
 
 __print_ljusted(' ' * __tab_w__ + 'Neural Network:')
 nn = torch.nn
@@ -75,7 +77,6 @@ print()
 __print_ljusted('IPython display func:')
 try:
     import IPython.display as display
-    %matplotlib inline
     __print_rjusted('Imported ✅')
 except Exception as e:
     __print_rjusted(f'{e} ❌')
@@ -90,5 +91,18 @@ except Exception as e:
     __print_rjusted(f'{e} ❌')
 
 print()
+__print_ljusted('IPython Matplotlib Inline Magic:')
+try:
+    from IPython import get_ipython
+    ipython = get_ipython()
+    ipython.magic('matplotlib inline')
+    __print_rjusted('Done ✅')
+except:
+    __print_rjusted('Not in IPython ❌')
+
+print()
 print('===== All Check Finished! ====='.center(60))
 print()
+
+
+#%%
