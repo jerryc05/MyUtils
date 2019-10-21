@@ -62,7 +62,7 @@ import warnings
 warnings.filterwarnings("ignore")
 import torchvision
 warnings.filterwarnings("default")
-__print_rjusted(f'v{torchvision.__version__} ✅')
+__print_rjusted(f'v{torchvision.version.__version__} ✅')
 
 __print_ljusted(' ' * __tab_w__ + 'TorchVision Transforms:')
 import torchvision.transforms as transforms
@@ -77,6 +77,7 @@ print()
 __print_ljusted('IPython display func:')
 try:
     import IPython.display as display
+    warnings.filterwarnings("default")
     __print_rjusted('Imported ✅')
 except Exception as e:
     __print_rjusted(f'{e} ❌')
