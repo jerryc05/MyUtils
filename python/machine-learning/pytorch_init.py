@@ -11,6 +11,9 @@ def __print_rjusted(s: str):
     print(s.rjust(25))
 
 
+import warnings
+warnings.filterwarnings("ignore")
+
 print()
 __print_ljusted('PyTorch:')
 import torch
@@ -24,6 +27,16 @@ __print_rjusted('Imported ✅')
 __print_ljusted(' ' * __tab_w__ + 'Optimizer:')
 optim = torch.optim
 __print_rjusted('Imported ✅')
+
+__print_ljusted(' ' * __tab_w__ + 'TensorBoard:')
+try:
+    import tensorboard
+    __print_rjusted(f'v{tensorboard.version.VERSION} ✅')
+    del tensorboard
+    import torch.utils.tensorboard
+    SummaryWriter = torch.utils.tensorboard.SummaryWriter
+except ImportError:
+    __print_rjusted('Not Installed ❌')
 
 print()
 print('Cuda:')
@@ -58,10 +71,7 @@ else:
 
 print()
 __print_ljusted('TorchVision:')
-import warnings
-warnings.filterwarnings("ignore")
 import torchvision
-warnings.filterwarnings("default")
 __print_rjusted(f'v{torchvision.version.__version__} ✅')
 
 __print_ljusted(' ' * __tab_w__ + 'TorchVision Transforms:')
@@ -77,10 +87,9 @@ print()
 __print_ljusted('IPython display func:')
 try:
     import IPython.display as display
-    warnings.filterwarnings("default")
     __print_rjusted('Imported ✅')
-except Exception as e:
-    __print_rjusted(f'{e} ❌')
+except ImportError:
+    __print_rjusted('Not installed ❌')
 
 print()
 __print_ljusted('Matplotlib:')
@@ -88,8 +97,8 @@ try:
     import matplotlib
     import matplotlib.pyplot as plt
     __print_rjusted(f'v{matplotlib.__version__} ✅')
-except Exception as e:
-    __print_rjusted(f'{e} ❌')
+except ImportError:
+    __print_rjusted('Not installed ❌')
 
 print()
 __print_ljusted('IPython Matplotlib Inline Magic:')
@@ -102,8 +111,8 @@ except:
     __print_rjusted('Not in IPython ❌')
 
 print()
+warnings.filterwarnings("default")
 print('===== All Check Finished! ====='.center(60))
 print()
-
 
 #%%
