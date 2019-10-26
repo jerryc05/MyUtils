@@ -1,5 +1,9 @@
 #%% PyTorch self-check script.
 
+import pkg_resources
+import warnings
+warnings.filterwarnings("ignore")
+
 __tab_w__ = 4
 
 
@@ -11,13 +15,14 @@ def __print_rjusted(s: str):
     print(s.rjust(25))
 
 
-import warnings
-warnings.filterwarnings("ignore")
+def __ver__(s: str):
+    return pkg_resources.get_distribution(s).version
+
 
 print()
 __print_ljusted('PyTorch:')
 import torch
-__print_rjusted('v' + torch.version.__version__ + ' ✅')
+__print_rjusted('v' + __ver__("torch") + ' ✅')
 
 __print_ljusted(' ' * __tab_w__ + 'Neural Network:')
 nn = torch.nn
@@ -31,7 +36,7 @@ __print_rjusted('Imported ✅')
 __print_ljusted(' ' * __tab_w__ + 'TensorBoard:')
 try:
     import tensorboard
-    __print_rjusted('v' + tensorboard.version.VERSION + ' ✅')
+    __print_rjusted('v' + __ver__("tensorboard") + ' ✅')
     del tensorboard
     import torch.utils.tensorboard
     SummaryWriter = torch.utils.tensorboard.SummaryWriter
@@ -73,7 +78,7 @@ else:
 print()
 __print_ljusted('TorchVision:')
 import torchvision
-__print_rjusted('v' + torchvision.version.__version__ + ' ✅')
+__print_rjusted('v' + __ver__('torchvision') + ' ✅')
 
 __print_ljusted(' ' * __tab_w__ + 'TorchVision Transforms:')
 import torchvision.transforms as transforms
@@ -82,7 +87,7 @@ __print_rjusted('Imported ✅')
 print()
 __print_ljusted('NumPy:')
 import numpy as np
-__print_rjusted('v' + np.__version__ + ' ✅')
+__print_rjusted('v' + __ver__('numpy') + ' ✅')
 
 print()
 __print_ljusted('IPython display func:')
@@ -97,7 +102,7 @@ __print_ljusted('Matplotlib:')
 try:
     import matplotlib
     import matplotlib.pyplot as plt
-    __print_rjusted('v' + matplotlib.__version__ + ' ✅')
+    __print_rjusted('v' + __ver__('matplotlib') + ' ✅')
 except ImportError:
     __print_rjusted('Not installed ❌')
 
