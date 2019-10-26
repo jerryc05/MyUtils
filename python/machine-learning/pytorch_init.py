@@ -1,4 +1,4 @@
-#%% PyTorch self-check script by github.com/jerryc05.
+#%% PyTorch self-check script.
 
 __tab_w__ = 4
 
@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 print()
 __print_ljusted('PyTorch:')
 import torch
-__print_rjusted(f'v{torch.version.__version__} ✅')
+__print_rjusted('v' + torch.version.__version__ + ' ✅')
 
 __print_ljusted(' ' * __tab_w__ + 'Neural Network:')
 nn = torch.nn
@@ -31,7 +31,7 @@ __print_rjusted('Imported ✅')
 __print_ljusted(' ' * __tab_w__ + 'TensorBoard:')
 try:
     import tensorboard
-    __print_rjusted(f'v{tensorboard.version.VERSION} ✅')
+    __print_rjusted('v' + tensorboard.version.VERSION + ' ✅')
     del tensorboard
     import torch.utils.tensorboard
     SummaryWriter = torch.utils.tensorboard.SummaryWriter
@@ -49,30 +49,31 @@ else:
     __print_rjusted(' ' * __tab_w__ + 'Working ✅')
 
     __print_ljusted(' ' * __tab_w__ + 'Version:')
-    __print_rjusted(f'v{torch.version.cuda} ✅')
+    __print_rjusted('v' + torch.version.cuda + ' ✅')
 
     current_id = torch.cuda.current_device()
     print(' ' * __tab_w__ + 'Cuda devices:')
     for i in range(torch.cuda.device_count()):
         prop = torch.cuda.get_device_properties(i)
         if i == current_id:
-            __print_ljusted(' ' * __tab_w__ + f'#{i} ✅  {prop.name.ljust(30)}')
+            __print_ljusted(' ' * __tab_w__ + '#' + str(i) + ' ✅  ' +
+                            prop.name.ljust(30))
         else:
-            __print_ljusted(' ' * __tab_w__ + f'#{i} ✋  {prop.name.ljust(30)}')
+            __print_ljusted(' ' * __tab_w__ + '#' + str(i) + ' ✋  ' +
+                            prop.name.ljust(30))
         mem = prop.total_memory
         mem_units = ('B', 'K', 'M', 'G', 'T', 'P', 'E', 'Z')
         mem_unit = 0
         while mem > 1024:
             mem_unit += 1
             mem /= 1024.
-        __print_rjusted(
-            f'{prop.multi_processor_count: 3} procs {mem:4.0f} {mem_units[mem_unit]}'
-        )
+        __print_rjusted('{: 3} procs {:4.0f} {}'.format(
+            prop.multi_processor_count, mem, mem_units[mem_unit]))
 
 print()
 __print_ljusted('TorchVision:')
 import torchvision
-__print_rjusted(f'v{torchvision.version.__version__} ✅')
+__print_rjusted('v' + torchvision.version.__version__ + ' ✅')
 
 __print_ljusted(' ' * __tab_w__ + 'TorchVision Transforms:')
 import torchvision.transforms as transforms
@@ -81,7 +82,7 @@ __print_rjusted('Imported ✅')
 print()
 __print_ljusted('NumPy:')
 import numpy as np
-__print_rjusted(f'v{np.__version__} ✅')
+__print_rjusted('v' + np.__version__ + ' ✅')
 
 print()
 __print_ljusted('IPython display func:')
@@ -96,7 +97,7 @@ __print_ljusted('Matplotlib:')
 try:
     import matplotlib
     import matplotlib.pyplot as plt
-    __print_rjusted(f'v{matplotlib.__version__} ✅')
+    __print_rjusted('v' + matplotlib.__version__ + ' ✅')
 except ImportError:
     __print_rjusted('Not installed ❌')
 
