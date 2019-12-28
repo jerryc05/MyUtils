@@ -68,8 +68,9 @@ else:
                             prop.name.ljust(30))
         mem = prop.total_memory
         mem_units = ('B', 'K', 'M', 'G', 'T', 'P', 'E', 'Z')
+        len_mem_units = len(mem_units)
         mem_unit = 0
-        while mem > 1024:
+        while mem > 1024 and mem_unit < len_mem_units:
             mem_unit += 1
             mem /= 1024.
         __print_rjusted('{: 3} procs {:4.0f} {}'.format(
