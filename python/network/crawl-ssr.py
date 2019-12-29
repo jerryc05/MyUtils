@@ -19,7 +19,7 @@ def crawl(x: str, q: Queue):
     content = urlopen(x).read()
     print(f'Contents from [{x}] received!')
     content += b'=' * (-len(content) % 4)
-    for x in b64decode(content).decode().splitlines():
+    for x in urlsafe_b64decode(content).decode().splitlines():
         q.put(x)
 
 
