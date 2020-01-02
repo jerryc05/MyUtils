@@ -44,7 +44,7 @@ except ImportError:
     __print_rjusted('Not Installed ❌')
 
 print()
-print('Cuda:')
+print('CUDA:')
 __print_ljusted(' ' * __tab_w__ + 'Availability:')
 if not torch.cuda.is_available():
     device = torch.device('cpu')
@@ -57,7 +57,7 @@ else:
     __print_rjusted('v' + torch.version.cuda + ' ✅')
 
     current_id = torch.cuda.current_device()
-    print(' ' * __tab_w__ + 'Cuda devices:')
+    print(' ' * __tab_w__ + 'CUDA devices:')
     for i in range(torch.cuda.device_count()):
         prop = torch.cuda.get_device_properties(i)
         if i == current_id:
