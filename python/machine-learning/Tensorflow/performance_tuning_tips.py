@@ -1,7 +1,13 @@
-#%%
+# %%
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Warning and Error only
+
 import tensorflow as tf
 from tensorflow.python.client import device_lib
 import re
+
+print(f'Tensorflow v{tf.__version__}'.center(90, '·'))
 
 tf_exp_config = tf.config.experimental
 
@@ -46,7 +52,7 @@ print()
 
 del tf_exp_config, unit, i, x
 
-#%%
+# %%
 from tensorflow.keras.mixed_precision import experimental as mixed_precision
 
 for i, x in enumerate(device_lib.list_local_devices()):
@@ -62,13 +68,13 @@ for i, x in enumerate(device_lib.list_local_devices()):
         print(f'\tVariable dtype: {float16_policy.variable_dtype}')
         del float16_policy
     else:
-        print('Skipping Mixed Precision...')
+        print(f'Skipping Mixed Precision due to compute capability [{_capability}] < 7')
     del cp_cap_re, _desc, _capability
     print()
     break
 
-#%%
-print('Enabling XLA for TensorFlow models')
+# %%
 tf.config.optimizer.set_jit(True)
+print('Enabled XLA for TensorFlow models')
 
-#%%
+# %%
