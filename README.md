@@ -1,22 +1,2 @@
 # MyUtils
 A collection of my helper codes to avoid duplication and boost productivity.
-
-# Gnu Privacy Guard
-
-My GPG Public Key:
-
-```
------BEGIN PGP PUBLIC KEY BLOCK-----
-
-mDMEXec1fBYJKwYBBAHaRw8BAQdAP0Nb0Ukw0X8DUz0qQvumT1XcpO4Cum1/S8ha
-T74Q/iW0KFppeWFuICJKZXJyeSIgQ2hlbiA8amVycnljNDQzQGdtYWlsLmNvbT6I
-kAQTFggAOBYhBJYRg2unkyOhjDsO2bllqbgagcqWBQJd5zV8AhsjBQsJCAcCBhUK
-CQgLAgQWAgMBAh4BAheAAAoJELllqbgagcqWUM8BANHheZLJ/BDmJZgl2hRv7BCM
-IzA8LbHBV677ChOWO51tAQDSWpmKrgbhu5rvxcOFGBj6SE8DLWXRm/SNKgyvXEsz
-Dbg4BF3nNXwSCisGAQQBl1UBBQEBB0AUqO29ICL2OPiIs/e1x6TI1gJbZbw1AUGH
-NiwV94lDFAMBCAeIeAQYFggAIBYhBJYRg2unkyOhjDsO2bllqbgagcqWBQJd5zV8
-AhsMAAoJELllqbgagcqWHCkBANJuC72W2ZPkIU5a6Fv/3dLyWljnTy+0u+GxTaTq
-pe49APwN+z/PsMokCU9nUO/n52lT3SLygv3tSudAXEC4D3EIAA==
-=9dqs
------END PGP PUBLIC KEY BLOCK-----
-```
