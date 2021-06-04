@@ -19,8 +19,6 @@ nv_gpu = nv_gpu_.lower() == 'y'
 
 # Autoexec:
 (f'''
-bind "F1" "toggle net_netGraph2 1 0; cl_showpos 1 0"    // Toggle for the FPS Counter
-bind "F2" "toggle shownet_enabled 1 0"                  // Net Graph Toggle
 bind "MWHEELDOWN" "+jump" 0     // Bhop
 bind "MWHEELUP"   "+jump" 0     // Bhop
 bind_US_standard "f"      "+ping"        0              // Ping (tap or hold)
