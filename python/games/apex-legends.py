@@ -19,19 +19,21 @@ nv_gpu = nv_gpu_.lower() == 'y'
 
 # Autoexec:
 (f'''
+bind F11 "exec autoexec"
 bind "MWHEELDOWN" "+jump" 0     // Bhop
 bind "MWHEELUP"   "+jump" 0     // Bhop
 bind_US_standard "f"      "+ping"        0              // Ping (tap or hold)
+bind_US_standard "mouse2" "+zoom"   	 0              // Toggle ADS
 bind_US_standard "mouse3" "ping_specific_type ENEMY" 0  // Ping enemy
-bind_US_standard "mouse4" "+offhand1"    0              // Tactical ability
-bind_US_standard "mouse5" "+melee"       0              // Quick melee attack
+bind_US_standard "mouse4" "+melee"       0              // Quick melee attack
+bind_US_standard "mouse5" "+offhand1"    0              // Tactical ability
 bind_US_standard "q"      "+weaponcycle" 0              // Cycle weapon
 chroma_enable 0                 // Disables Razer Chroma
 cl_forcepreload 1
 cl_fovScale "1.6"               // 1.55 = 110FOV | 1.7 = 120FOV
 cl_ragdoll_collide 0
 cl_showfps "4"
-fps_max "200"
+fps_max 300
 hud_setting_minimapRotate "1"   // This setting allows the minimap to rotate with you (default 0)
 hud_setting_pingAlpha "0.4"     // Opacity of the pings and downed banners (default 1)
 m_acceleration "0"              // Once again this makes sure mouse acceleration is off
