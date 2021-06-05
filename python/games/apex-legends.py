@@ -37,43 +37,43 @@ bind_US_standard "7"        "use_consumable HEALTH_LARGE"  0  // Quick-use medpa
 bind_US_standard "8"        "use_consumable HEALTH_SMALL"  0  // Quick-use medpack (syringe)
 chroma_enable 0                 // Disables Razer Chroma
 cl_forcepreload 1
-cl_fovScale "1.7"               // 1.55 = 110FOV | 1.7 = 120FOV
+cl_fovScale "1.8"               // 1.55 = 110FOV | 1.7 = 120FOV
 cl_ragdoll_collide 0
 cl_showfps "4"
-closecaption "1"
-damage_indicator_style_pilot "1"
+closecaption  1
+damage_indicator_style_pilot  1
 fps_max 300
-hud_setting_anonymousMode "1"
+hud_setting_anonymousMode  1
 hud_setting_damageTextStyle "3"
-hud_setting_minimapRotate "1"   // This setting allows the minimap to rotate with you (default 0)
+hud_setting_minimapRotate  1    // This setting allows the minimap to rotate with you (default 0)
 hud_setting_pingAlpha "0.4"     // Opacity of the pings and downed banners (default 1)
-hud_setting_streamerMode "1"
-m_acceleration "0"              // Once again this makes sure mouse acceleration is off
-m_filter "0"                    // Makes sure any kind of mouse filtering is off
-m_rawinput "1"                  // Takes the direct input of your mouse
+hud_setting_streamerMode  1
+m_acceleration  0               // Once again this makes sure mouse acceleration is off
+m_filter  0                     // Makes sure any kind of mouse filtering is off
+m_rawinput  1                   // Takes the direct input of your mouse
 mat_bloom_scalefactor_scalar 0  // Disables bloom (nothing to do with recoil, just the graphical effect you fn weirdo)
 mat_compressedtextures 1
 mat_screen_blur_enabled 0
 mouse_sensitivity "1.6"         // Your mouse sensitivity
 noise_filter_scale 0            // Removes Film-grain
 pin_opt_in 0
-player_setting_damage_closes_deathbox_menu "0"          // Your inventory wont auto-close anymore when receiving damage
+player_setting_damage_closes_deathbox_menu  0           // Your inventory wont auto-close anymore when receiving damage
 r_dxgi_max_frame_latency 0
 r_dynamic 0
-r_fastzreject "{-1 if nv_gpu else 0}"
+r_fastzreject  0
 r_fullscreen 1
 r_particle_timescale 3
 sound_volume_dialogue "0.5"
 sound_volume_music_game "0.5"
 sound_volume_music_lobby "0.25"
-ssao_enabled "0"
-ssao_blur "0"
+ssao_enabled 0
+ssao_blur 0
 ssao_radius "59"
-sprint_view_shake_style "1"     // Less Headbob
+sprint_view_shake_style 1       // Less Headbob
 telemetry_client_enable 0
 telemetry_client_sendInterval 0
-toggle_on_jump_to_deactivate "1"
-toggle_on_jump_to_deactivate_changed "1"
+toggle_on_jump_to_deactivate 0
+toggle_on_jump_to_deactivate_changed 0
 twitch_prime_linked 1
 {"r_shadows 0" if shadow_ok else ""}
 ''')
