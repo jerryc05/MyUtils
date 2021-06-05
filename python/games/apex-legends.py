@@ -19,21 +19,21 @@ nv_gpu = nv_gpu_.lower() == 'y'
 
 # Autoexec:
 (f'''
-bind "MWHEELDOWN" "+jump" 0     // Bhop
-bind "MWHEELUP"   "+jump" 0     // Bhop
-bind_US_standard "`" "exec autoexec"
-bind_US_standard "f"      "+ping"        0              // Ping (tap or hold)
-bind_US_standard "mouse2" "+toggle_zoom" 0              // Toggle ADS
-// bind_US_standard "mouse2" "+zoom"        0              // Hold ADS
-bind_US_standard "mouse3" "ping_specific_type ENEMY" 0  // Ping enemy
-bind_US_standard "mouse4" "+melee"       0              // Quick melee attack
-bind_US_standard "mouse5" "+offhand1"    0              // Tactical ability
-bind_US_standard "v"      "+pushtotalk"  0              // Push-to-talk
-bind_US_standard "q"      "+weaponcycle" 0              // Cycle weapon
-bind_US_standard "5"      "use_consumable SHIELD_LARGE"  0  // Quick-use medpack (shield battery)
-bind_US_standard "6"      "use_consumable SHIELD_SMALL"  0  // Quick-use medpack (shield cell)
-bind_US_standard "7"      "use_consumable HEALTH_LARGE"  0  // Quick-use medpack (med kit)
-bind_US_standard "8"      "use_consumable HEALTH_SMALL"  0  // Quick-use medpack (syringe)
+bind "MWHEELDOWN"           "+jump;+forward"    0
+bind "MWHEELUP"             "+jump"             0
+bind_US_standard "`"        "exec autoexec"
+bind_US_standard "f"        "+ping"             0           // Ping (tap or hold)
+bind_US_standard "mouse2"   "+toggle_zoom"      0           // Toggle ADS
+// bind_US_standard "mouse2"   "+zoom"             0           // Hold ADS
+bind_US_standard "mouse3"   "ping_specific_type ENEMY"  0   // Ping enemy
+bind_US_standard "mouse4"   "+melee"            0           // Quick melee attack
+bind_US_standard "mouse5"   "+offhand1"         0           // Tactical ability
+bind_US_standard "v"        "+pushtotalk"       0           // Push-to-talk
+bind_US_standard "q"        "+weaponcycle"      0           // Cycle weapon
+bind_US_standard "5"        "use_consumable SHIELD_LARGE"  0  // Quick-use medpack (shield battery)
+bind_US_standard "6"        "use_consumable SHIELD_SMALL"  0  // Quick-use medpack (shield cell)
+bind_US_standard "7"        "use_consumable HEALTH_LARGE"  0  // Quick-use medpack (med kit)
+bind_US_standard "8"        "use_consumable HEALTH_SMALL"  0  // Quick-use medpack (syringe)
 chroma_enable 0                 // Disables Razer Chroma
 cl_forcepreload 1
 cl_fovScale "1.7"               // 1.55 = 110FOV | 1.7 = 120FOV
