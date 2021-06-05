@@ -19,9 +19,9 @@ nv_gpu = nv_gpu_.lower() == 'y'
 
 # Autoexec:
 (f'''
-bind F11 "exec autoexec"
 bind "MWHEELDOWN" "+jump" 0     // Bhop
 bind "MWHEELUP"   "+jump" 0     // Bhop
+bind_US_standard "`" "exec autoexec"
 bind_US_standard "f"      "+ping"        0              // Ping (tap or hold)
 bind_US_standard "mouse2" "+toggle_zoom" 0              // Toggle ADS
 // bind_US_standard "mouse2" "+zoom"        0              // Hold ADS
@@ -49,12 +49,16 @@ mat_compressedtextures 1
 mat_screen_blur_enabled 0
 mouse_sensitivity "1.6"         // Your mouse sensitivity
 noise_filter_scale 0            // Removes Film-grain
+pin_opt_in 0
 player_setting_damage_closes_deathbox_menu "0"          // Your inventory wont auto-close anymore when receiving damage
 r_dxgi_max_frame_latency 0
 r_dynamic 0
 r_fastzreject "{-1 if nv_gpu else 0}"
 r_fullscreen 1
 r_particle_timescale 3
+ssao_enabled "0"
+ssao_blur "0"
+ssao_radius "59"
 sprint_view_shake_style "1"     // Less Headbob
 telemetry_client_enable 0
 telemetry_client_sendInterval 0
