@@ -24,8 +24,8 @@ bind "MWHEELUP"             "+jump"             0
 bind_US_standard "SPACE"    "+jump"             0
 bind_US_standard "`"        "exec autoexec"
 bind_US_standard "f"        "+ping"             0           // Ping (tap or hold)
-bind_US_standard "mouse2"   "+toggle_zoom"      0           // Toggle ADS
-// bind_US_standard "mouse2"   "+zoom"             0           // Hold ADS
+// bind_US_standard "mouse2"   "+toggle_zoom"      0           // Toggle ADS
+bind_US_standard "mouse2"   "+zoom"             0           // Hold ADS
 bind_US_standard "mouse3"   "ping_specific_type ENEMY"  0   // Ping enemy
 bind_US_standard "mouse4"   "+melee"            0           // Quick melee attack
 bind_US_standard "mouse5"   "+offhand1"         0           // Tactical ability
