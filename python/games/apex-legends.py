@@ -60,7 +60,7 @@ pin_opt_in 0
 player_setting_damage_closes_deathbox_menu  0           // Your inventory wont auto-close anymore when receiving damage
 r_dxgi_max_frame_latency 0
 r_dynamic 0
-r_fastzreject  0
+r_fastzreject  {-1 if nv_gpu else 0}
 r_fullscreen 1
 r_particle_timescale 3
 sound_volume_dialogue "0.5"
