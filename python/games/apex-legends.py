@@ -148,7 +148,6 @@ mat_bumpmap  0
 mat_colcorrection_disableentities  1
 mat_colorcorrection  0
 mat_colorcorrection_editor  0
-mat_compressedtextures  1
 mat_compressedtextures 1
 mat_debug_tonemapping_disable  1
 mat_depthbias_shadowmap  0
