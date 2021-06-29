@@ -219,7 +219,6 @@ particle_gpu_level  0
 pertrianglecollision  0
 pin_opt_in 0
 player_setting_damage_closes_deathbox_menu  0           // Your inventory wont auto-close anymore when receiving damage
-player_setting_stickysprintforward 1
 projectile_faketrails  0
 projectile_filltrails "2"//Fill the gap between the gun barrel and the first seen projectile position for trail
 prop_active_gib_limit  0
