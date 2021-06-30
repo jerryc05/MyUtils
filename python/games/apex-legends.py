@@ -23,8 +23,8 @@ bind "MWHEELDOWN"           "+jump;+forward"    0
 bind "MWHEELUP"             "+jump"             0
 bind_US_standard "SPACE"    "+jump"             0
 bind_US_standard "f9"       "exec autoexec"
-bind_US_standard "f10"      "bind_US_standard mouse2   \"+toggle_zoom\"" // Toggle ADS
-bind_US_standard "f11"      "bind_US_standard mouse2          \"+zoom\"" // Hold ADS
+bind_US_standard "f2"       "bind_US_standard mouse2   \"+toggle_zoom\"" // Toggle ADS
+bind_US_standard "f3"       "bind_US_standard mouse2          \"+zoom\"" // Hold ADS
 bind_US_standard "f"        "+ping"             0           // Ping (tap or hold)
 bind_US_standard "mouse3"   "ping_specific_type ENEMY"  0   // Ping enemy
 bind_US_standard "mouse4"   "+melee"            0           // Quick melee attack
