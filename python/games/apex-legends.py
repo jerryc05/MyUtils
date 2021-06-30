@@ -206,7 +206,6 @@ mat_vsync_mode  0
 model_fadeRangeFraction  0
 modeldecals_forceAllowed  0
 monitor_mat_sharpen_amount  0
-mouse_zoomed_sensitivity_scalar_0 "1.1"
 mp_decals  0 //Disable decals
 mp_usehwmmodels -1 //Do not use or load high quality characters
 mp_usehwmvcds   -1 //Do not use or load high quality character facial expressions
@@ -220,7 +219,7 @@ pertrianglecollision  0
 pin_opt_in 0
 player_setting_damage_closes_deathbox_menu  0           // Your inventory wont auto-close anymore when receiving damage
 projectile_faketrails  0
-projectile_filltrails "2"//Fill the gap between the gun barrel and the first seen projectile position for trail
+projectile_filltrails  2                                //Fill the gap between the gun barrel and the first seen projectile position for trail
 prop_active_gib_limit  0
 pvs_yield  1
 r_DrawBeams  0
