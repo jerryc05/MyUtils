@@ -58,7 +58,7 @@ cl_disable_ragdolls  1
 cl_drawshadowtexture  0
 cl_ejectbrass  0 //Disables brass ejection
 cl_forcepreload 1
-cl_fovScale "1.8"               // 1.55 = 110FOV | 1.7 = 120FOV
+cl_fovScale "1.5"               // 1.55 = 110FOV | 1.7 = 120FOV
 cl_gib_allow  0
 cl_idealpitchscale  0
 cl_jiggle_bone_framerate_cutoff  0
@@ -84,8 +84,9 @@ cl_ragdoll_force_fade_time_on_moving_geo  0
 cl_ragdoll_maxcount  0
 cl_ragdoll_self_collision  0
 cl_show_splashes  0
-cl_showfiredbullets  0
+cl_showfiredbullets  1
 cl_showfps 1
+cl_showpos 1
 cl_simdbones_slerp  1
 cl_smooth  0
 cl_threaded_bone_setup  1
